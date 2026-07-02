@@ -1,0 +1,17 @@
+class Solution {
+    public int minimumChairs(String s) {
+        int current = 0;
+        int maxChairs = 0;
+
+        for (char ch : s.toCharArray()) {
+            if (ch == 'E') {
+                current++;
+                maxChairs = Math.max(maxChairs, current);
+            } else {
+                current--;
+            }
+        }
+
+        return maxChairs;
+    }
+}
